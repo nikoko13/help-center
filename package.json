@@ -10,6 +10,10 @@
     "@mdi/font": "^6.6.96",
     "@nuxt/content": "^2.0.1",
     "@nuxt/vite-builder": "^3.0.0-rc.3",
+    "concurrent-transform": "^1.0.0",
+    "gulp": "^4.0.2",
+    "gulp-awspublish": "^6.0.2",
+    "gulp-cloudfront-invalidate-aws-publish": "^1.0.0",
     "nuxt": "^3.0.0-rc.3"
   },
   "dependencies": {
