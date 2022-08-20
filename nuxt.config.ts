@@ -2,7 +2,10 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-    ssr: false, 
+    // ssr: false,
+    // nitro: {
+    //     preset: 'service-worker'
+    //   }, 
     css: [
         "vuetify/lib/styles/main.sass"
     ],
