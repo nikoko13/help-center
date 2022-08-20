@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html data-head-attrs="">
+<head><title>Logging out of your account</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style type="text/css" id="vuetify-theme-stylesheet">.v-theme--light {
+      color-scheme: normal;
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 98,0,238;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 3,218,198;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-kbd-background-color: 33, 37, 41;
+      --v-kbd-color: 255, 255, 255;
+      --v-code-background-color: 194, 194, 194;
+    }
+    .v-theme--dark {
+      color-scheme: dark;
+      --v-theme-background: 18,18,18;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 33,33,33;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 189,189,189;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 66,66,66;
+      --v-theme-primary: 187,134,252;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 1;
+      --v-theme-secondary: 3,218,197;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 3,218,197;
+      --v-theme-secondary-darken-1-overlay-multiplier: 2;
+      --v-theme-error: 207,102,121;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 2;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 2;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 2;
+      --v-theme-on-background: 255,255,255;
+      --v-theme-on-surface: 255,255,255;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 0,0,0;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 255, 255, 255;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.1;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.16;
+      --v-dragged-opacity: 0.08;
+      --v-kbd-background-color: 33, 37, 41;
+      --v-kbd-color: 255, 255, 255;
+      --v-code-background-color: 183, 183, 183;
+    }
+    .bg-background {
+      --v-theme-overlay-multiplier: var(--v-theme-background-overlay-multiplier);
+      background: rgb(var(--v-theme-background)) !important;
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .bg-surface {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-overlay-multiplier);
+      background: rgb(var(--v-theme-surface)) !important;
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .bg-surface-variant {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-variant-overlay-multiplier);
+      background: rgb(var(--v-theme-surface-variant)) !important;
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .bg-primary {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+      background: rgb(var(--v-theme-primary)) !important;
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .bg-primary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-darken-1-overlay-multiplier);
+      background: rgb(var(--v-theme-primary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .bg-secondary {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-overlay-multiplier);
+      background: rgb(var(--v-theme-secondary)) !important;
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .bg-secondary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-darken-1-overlay-multiplier);
+      background: rgb(var(--v-theme-secondary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .bg-error {
+      --v-theme-overlay-multiplier: var(--v-theme-error-overlay-multiplier);
+      background: rgb(var(--v-theme-error)) !important;
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .bg-info {
+      --v-theme-overlay-multiplier: var(--v-theme-info-overlay-multiplier);
+      background: rgb(var(--v-theme-info)) !important;
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .bg-success {
+      --v-theme-overlay-multiplier: var(--v-theme-success-overlay-multiplier);
+      background: rgb(var(--v-theme-success)) !important;
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .bg-warning {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-overlay-multiplier);
+      background: rgb(var(--v-theme-warning)) !important;
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .text-background {
+      color: rgb(var(--v-theme-background)) !important;
+    }
+    .border-background {
+      --v-border-color: var(--v-theme-background);
+    }
+    .text-surface {
+      color: rgb(var(--v-theme-surface)) !important;
+    }
+    .border-surface {
+      --v-border-color: var(--v-theme-surface);
+    }
+    .text-surface-variant {
+      color: rgb(var(--v-theme-surface-variant)) !important;
+    }
+    .border-surface-variant {
+      --v-border-color: var(--v-theme-surface-variant);
+    }
+    .on-surface-variant {
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .text-primary {
+      color: rgb(var(--v-theme-primary)) !important;
+    }
+    .border-primary {
+      --v-border-color: var(--v-theme-primary);
+    }
+    .text-primary-darken-1 {
+      color: rgb(var(--v-theme-primary-darken-1)) !important;
+    }
+    .border-primary-darken-1 {
+      --v-border-color: var(--v-theme-primary-darken-1);
+    }
+    .text-secondary {
+      color: rgb(var(--v-theme-secondary)) !important;
+    }
+    .border-secondary {
+      --v-border-color: var(--v-theme-secondary);
+    }
+    .text-secondary-darken-1 {
+      color: rgb(var(--v-theme-secondary-darken-1)) !important;
+    }
+    .border-secondary-darken-1 {
+      --v-border-color: var(--v-theme-secondary-darken-1);
+    }
+    .text-error {
+      color: rgb(var(--v-theme-error)) !important;
+    }
+    .border-error {
+      --v-border-color: var(--v-theme-error);
+    }
+    .text-info {
+      color: rgb(var(--v-theme-info)) !important;
+    }
+    .border-info {
+      --v-border-color: var(--v-theme-info);
+    }
+    .text-success {
+      color: rgb(var(--v-theme-success)) !important;
+    }
+    .border-success {
+      --v-border-color: var(--v-theme-success);
+    }
+    .text-warning {
+      color: rgb(var(--v-theme-warning)) !important;
+    }
+    .border-warning {
+      --v-border-color: var(--v-theme-warning);
+    }
+    .on-background {
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .on-surface {
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .on-primary {
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .on-primary-darken-1 {
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .on-secondary {
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .on-secondary-darken-1 {
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .on-error {
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .on-info {
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .on-success {
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .on-warning {
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+</style><link rel="prefetch" href="/api/_content/query/ZxVfMhEzvs"><link rel="prefetch" href="/api/_content/query/LvIsZKg7qZ"><link rel="prefetch" href="/api/_content/query/cipQHIUMHg"><meta name="description" content="Logging out of Elementari does not delete your account or your stories. You can always log back in later by using the Log in button.
+It&#39;s recommended to log yourself out when you are done using Elementari, especially on shared devices."><meta name="head:count" content="7"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/entry.a281fa97.mjs"><link rel="preload" as="style" href="/_nuxt/entry.003c8e2d.css"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/root.41283d51.mjs"><link rel="preload" as="style" href="/_nuxt/root.2373520e.css"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/_...slug_.b5deb461.mjs"><link rel="preload" as="style" href="/_nuxt/[...slug].fb1f5138.css"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ProseH1.c9986fb9.mjs"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ProseP.cf554962.mjs"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ProseStrong.b43ffd85.mjs"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ProseOl.1b19e780.mjs"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ProseLi.eaa4bb36.mjs"><link rel="prefetch" as="font" type="font/eot" crossorigin href="/_nuxt/materialdesignicons-webfont.5be9e9d7.eot"><link rel="prefetch" as="font" type="font/woff2" crossorigin href="/_nuxt/materialdesignicons-webfont.633d596f.woff2"><link rel="prefetch" as="font" type="font/woff" crossorigin href="/_nuxt/materialdesignicons-webfont.7f3afe9b.woff"><link rel="prefetch" as="font" type="font/ttf" crossorigin href="/_nuxt/materialdesignicons-webfont.948fce52.ttf"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ArticleList.12f6428f.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/CategoryArticlesList.b030b42f.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ContentList.cb5a43bd.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ContentNavigation.6b16df7e.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/Markdown.ce7bd4e4.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseA.b41888db.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseBlockquote.b670ea29.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseCode.7af9229d.mjs"><link rel="prefetch stylesheet" href="/_nuxt/ProseCode.e63e49c6.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseCodeInline.7800b1bb.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseEm.2cff2b5c.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseH2.a8d8bc92.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseH3.41aab42d.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseH4.c89a8370.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseH5.0e5e2900.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseH6.2f95f1d0.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseHr.8ce11f95.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseImg.eb87b6c5.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseTable.00d09af0.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseTbody.05ab6068.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseTd.c0fec18e.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseTh.04f329ba.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseThead.0e1d7ca2.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseTr.3ebb497a.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/ProseUl.bcb7e870.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/_index.6800f032.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/create-stories.260b556f.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/detail-view.013eaced.mjs"><link rel="prefetch stylesheet" href="/_nuxt/detail-view.8a178570.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/start.d4a5da82.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/index.55d7ba70.mjs"><link rel="prefetch stylesheet" href="/_nuxt/index.0d2b115f.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/index.2edf9805.mjs"><link rel="prefetch stylesheet" href="/_nuxt/index.e4ac256f.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/web-socket.a02fbfe5.mjs"><link rel="prefetch" as="script" crossorigin href="/_nuxt/error-component.e8faa755.mjs"><link rel="stylesheet" href="/_nuxt/entry.003c8e2d.css"><link rel="stylesheet" href="/_nuxt/root.2373520e.css"><link rel="stylesheet" href="/_nuxt/[...slug].fb1f5138.css"></head>
+<body data-head-attrs=""><div id="__nuxt"><div class="v-application v-theme--light v-layout v-layout--full-height v-locale--is-ltr" style="z-index:1000;"><div class="v-application__wrap"><!--[--><div><header class="v-toolbar v-toolbar--density-default bg-white v-theme--light v-app-bar" style="z-index:1004;transform:translateY(0%);position:fixed;" prominent><!----><div class="v-toolbar__content" style="height:64px;"><div class="v-toolbar__prepend"><!--[--><a href="/" class="" style="height:48px;"><img id="brand1" src="data:image/png;base64,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" alt="Help Center Home Page"></a><!--]--></div><!----><!--[--><div class="v-toolbar-title d-none d-sm-flex"><div class="v-toolbar-title__placeholder"><!----><!--[--><span style="color:rgb(81, 81, 81);"> Help Center </span><!--]--></div></div><div class="flex-grow-1"></div><a href="https://www.elementari.com" target="_blank" style="text-decoration:none;" class="d-none d-sm-flex"><span style="color:rgb(81, 81, 81);font-weight:600;"> Elementari <i class="mdi-open-in-new mdi v-icon notranslate v-theme--light" style="font-size:24px;height:24px;width:24px;" aria-hidden="true"></i></span></a><!--]--><!----></div><!----></header></div><main class="v-main" style="--v-layout-left:0px;--v-layout-right:0px;--v-layout-top:0px;--v-layout-bottom:0px;transition:none !important;"><!--[--><!--[--><div class="v-container article-wrapper"><div id="article"><!--[--><ul class="v-breadcrumbs v-breadcrumbs--density-default px-0" style=""><!----><!--[--><!--[--><a class="v-breadcrumbs-item v-breadcrumbs-item--link" style="" href="/" text="Help Center"><!----></a><li class="v-breadcrumbs-divider"><!--[--><i class="mdi-chevron-right mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i><!--]--></li><!--]--><!--[--><a class="v-breadcrumbs-item v-breadcrumbs-item--link" style="" href="/account-settings" text="Account Settings"><!----></a><li class="v-breadcrumbs-divider"><!--[--><i class="mdi-chevron-right mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i><!--]--></li><!--]--><!--[--><li class="v-breadcrumbs-item v-breadcrumbs-item--disabled" style="" text="Logging out of your account"><!----></li><!----><!--]--><!--]--><!----></ul><div><h1 id="how-to-log-out-of-your-account"><!--[-->How to log out of your account<!--]--></h1><p><!--[-->Logging out of Elementari does not delete your account or your stories. You can always log back in later by using the <strong><!--[-->Log in<!--]--></strong> button.
+It&#39;s recommended to log yourself out when you are done using Elementari, especially on shared devices.<!--]--></p><ol><!--[--><li><!--[-->Click on your <strong><!--[-->profile picture<!--]--></strong> located at the top right of the screen.<!--]--></li><li><!--[-->In the drop down menu, click <strong><!--[-->Logout<!--]--></strong> to simply end your session.<!--]--></li><!--]--></ol></div><div><h3 class="mb-3 mt-6">Related articles</h3><div class="v-row" style="margin-left:-12px;margin-right:-12px;"><!--[--><div class="v-col-sm-12 v-col-md-6 v-col-lg-6 v-col"><a class="v-card v-card--flat v-card--link v-theme--light v-card--density-default v-card--variant-elevated help-cat-card" style="" href="/account-settings/account-security/protect-your-account"><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--light" style="--v-progress-linear-height:2px;" role="progressbar" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="width:100%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><div class="mb-3" style="color:#ff883e;">Protect your account</div><div class="help-cat-card-desc"></div><!--]--><!----><!--[--><span class="v-card__overlay"></span><span class="v-card__underlay"></span><!--]--></a></div><!--]--></div></div><!--]--></div></div><!--]--><!--]--></main><footer class="v-footer v-theme--light text-white text-center d-flex flex-column mt-6" style="_key:colorStyles;background-color:rgb(21, 101, 192);"><div><a class="v-btn v-btn--icon v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-plain mx-4" style="" href="https://www.youtube.com/c/elementari_io" target="_blank"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><i class="mdi-youtube mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i><!--]--></span><!----><!----></a><a class="v-btn v-btn--icon v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-plain mx-4" style="" href="https://www.facebook.com/elementari.io" target="_blank"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><i class="mdi-facebook mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i><!--]--></span><!----><!----></a><a class="v-btn v-btn--icon v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-plain mx-4" style="" href="https://www.twitter.com/elementari" target="_blank"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><i class="mdi-twitter mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i><!--]--></span><!----><!----></a><a class="v-btn v-btn--icon v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-plain mx-4" style="" href="https://www.linkedin.com/company/elementari" target="_blank"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><i class="mdi-linkedin mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i><!--]--></span><!----><!----></a></div><div class="text-white pt-0 pb-2" style="font-size:15px;"> © 2022 All Rights Reserved, Elementari ® </div><hr class="v-divider v-theme--light" style="" aria-orientation="horizontal" role="separator"><div class="text-white" style="font-size:15px;"><a href="https://elementari.com/policy/privacy" target="_blank" style="color:white;">Privacy policies</a> — <a href="https://elementari.com/policy/terms" target="_blank" style="color:white;">Terms</a></div></footer><!--]--></div></div></div><script>window.__NUXT__=(function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v){return {data:{"content-query-qZBrAr19UO":{_path:"\u002Faccount-settings\u002Faccount-security\u002Flog-out",_draft:d,_partial:d,_empty:d,title:"Logging out of your account",description:"Logging out of Elementari does not delete your account or your stories. You can always log back in later by using the Log in button.\r\nIt's recommended to log yourself out when you are done using Elementari, especially on shared devices.",excerpt:{type:g,children:[{type:b,tag:h,props:{id:i},children:[{type:a,value:j}]},{type:b,tag:k,props:{},children:[{type:a,value:l},{type:b,tag:c,props:{},children:[{type:a,value:m}]},{type:a,value:n}]},{type:b,tag:o,props:{},children:[{type:b,tag:e,props:{},children:[{type:a,value:p},{type:b,tag:c,props:{},children:[{type:a,value:q}]},{type:a,value:r}]},{type:b,tag:e,props:{},children:[{type:a,value:s},{type:b,tag:c,props:{},children:[{type:a,value:t}]},{type:a,value:u}]}]}]},_subcategory:"Account security",_parent:"Account Settings",_parent_path:"\u002Faccount-settings",body:{type:g,children:[{type:b,tag:h,props:{id:i},children:[{type:a,value:j}]},{type:b,tag:k,props:{},children:[{type:a,value:l},{type:b,tag:c,props:{},children:[{type:a,value:m}]},{type:a,value:n}]},{type:b,tag:o,props:{},children:[{type:b,tag:e,props:{},children:[{type:a,value:p},{type:b,tag:c,props:{},children:[{type:a,value:q}]},{type:a,value:r}]},{type:b,tag:e,props:{},children:[{type:a,value:s},{type:b,tag:c,props:{},children:[{type:a,value:t}]},{type:a,value:u}]}]}],toc:{title:f,searchDepth:v,depth:v,links:[]}},_type:"markdown",_id:"content:4.account-settings:account-security:log-out.md",_source:"content",_file:"4.account-settings\u002Faccount-security\u002Flog-out.md",_extension:"md"}},state:{},_errors:{},serverRendered:true,config:{public:{content:{base:"_content",tags:{p:"prose-p",a:"prose-a",blockquote:"prose-blockquote","code-inline":"prose-code-inline",code:"prose-code",em:"prose-em",h1:"prose-h1",h2:"prose-h2",h3:"prose-h3",h4:"prose-h4",h5:"prose-h5",h6:"prose-h6",hr:"prose-hr",img:"prose-img",ul:"prose-ul",ol:"prose-ol",li:"prose-li",strong:"prose-strong",table:"prose-table",thead:"prose-thead",tbody:"prose-tbody",td:"prose-td",th:"prose-th",tr:"prose-tr"},highlight:d,wsUrl:f}},app:{baseURL:"\u002F",buildAssetsDir:"\u002F_nuxt\u002F",cdnURL:f}}}}("text","element","strong",false,"li","","root","h1","how-to-log-out-of-your-account","How to log out of your account","p","Logging out of Elementari does not delete your account or your stories. You can always log back in later by using the ","Log in"," button.\r\nIt's recommended to log yourself out when you are done using Elementari, especially on shared devices.","ol","Click on your ","profile picture"," located at the top right of the screen.","In the drop down menu, click ","Logout"," to simply end your session.",2))</script><script type="module" src="/_nuxt/entry.a281fa97.mjs" crossorigin></script><script type="module" src="/_nuxt/root.41283d51.mjs" crossorigin></script><script type="module" src="/_nuxt/_...slug_.b5deb461.mjs" crossorigin></script><script type="module" src="/_nuxt/ProseH1.c9986fb9.mjs" crossorigin></script><script type="module" src="/_nuxt/ProseP.cf554962.mjs" crossorigin></script><script type="module" src="/_nuxt/ProseStrong.b43ffd85.mjs" crossorigin></script><script type="module" src="/_nuxt/ProseOl.1b19e780.mjs" crossorigin></script><script type="module" src="/_nuxt/ProseLi.eaa4bb36.mjs" crossorigin></script></body>
+</html>
