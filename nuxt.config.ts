@@ -2,7 +2,7 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-    ssr: false,
+    // ssr: false,
     // hooks: {
     //     'vite:extendConfig' (config, { isClient }) {
     //       if (process.env.NODE_ENV !== 'development' && isClient) {

@@ -282,9 +282,6 @@ const topArticles = await queryContent(path)
   .where({ _featured: true })
   .find();
 
-console.log(topArticles)
-
-
 const clickSearch = function () {
   
   if (props.searchValue == '') return
