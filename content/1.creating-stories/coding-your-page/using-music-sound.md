@@ -15,4 +15,6 @@ Pick background music or sound effects from the **Play Music** and **Play Sound 
 3. Click on the **Functions** tab on the right hand side and search for the following **blocks**:
     - **Play Music**
     - **Play Sound Effect**
-4. Add the block by clicking on the block or dragging it on your page.
+4. Add either block by clicking on the block or dragging it on your page.
+5. Click the **Select a sound** button located on the block to open a menu.
+6. 
