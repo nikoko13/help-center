@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     ssr: false,
     nitro: {
       preset: 'service-worker',
-    }
+    },
     // hooks: {
     //     'vite:extendConfig' (config, { isClient }) {
     //       if (process.env.NODE_ENV !== 'development' && isClient) {
