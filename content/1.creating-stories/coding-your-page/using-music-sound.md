@@ -16,5 +16,6 @@ Pick background music or sound effects from the **Play Music** and **Play Sound 
     - **Play Music**
     - **Play Sound Effect**
 4. Add either block by clicking on the block or dragging it on your page.
-5. Click the **Select a sound** button located on the block to open a menu.
-6. 
+5. Click the **Select a sound** button located on the block to open up a dialog menu.
+6. Browse and select the sound you want to play.
+7. You will then need to connect the **Play Music** or **Play Sound Effect** block to the event block of your choice.
