@@ -214,14 +214,12 @@
 </template>
 
 <script setup>
-
-
-const tabs = [
-  'account',
-  'classroom',
-  'stories',
-  'subscription',
-]
+// const tabs = [
+//   'account',
+//   'classroom',
+//   'stories',
+//   'subscription',
+// ]
 
 const sections = [
   {
@@ -276,6 +274,8 @@ const props = defineProps({
   searchValue: String,
   tab: String
 });
+
+if (import.meta.env.PROD) { var tab = toRef(props, 'tab') }
 
 const { path } = useRoute();
 const topArticles = await queryContent(path)

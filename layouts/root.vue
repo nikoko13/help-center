@@ -5,6 +5,7 @@
 
     <v-main>
       <slot />
+      <NuxtLoadingIndicator color="#FF9100"  />
       
     </v-main>
 
