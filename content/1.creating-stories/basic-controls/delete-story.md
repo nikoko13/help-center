@@ -15,8 +15,8 @@ Keep your dashboard organized by deleting stories that you don’t need or want 
     Stories deletions are permanent and cannot be reverted.
 </v-alert>
 
-1. From the navbar at the top of the screen, click the **Write** button.
-2. In the dashboard, every story you have created will listed. Locate the story you want to delete.
-2. Click on <v-icon icon="mdi-dots-vertical"></v-icon> at the bottom right of the story thumbnail.
-3. Click on **Delete** in the menu.
+1. If the story is published, you must unpublish it first.
+2. Open the story you want to delete in your dashboard.
+3. Click on <v-icon icon="mdi-menu-down"></v-icon> at the top right corner in the main toolbar.
+4. Click on **Delete story** in the menu.
 
