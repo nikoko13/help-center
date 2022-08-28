@@ -7,3 +7,5 @@ _parent_path: /payments-pricing-and-billing
 
 ---
 # About the educator pricing
+
+

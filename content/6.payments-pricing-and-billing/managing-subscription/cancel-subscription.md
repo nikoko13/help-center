@@ -8,4 +8,12 @@ _featured: true
 _featured_in_all: true
 
 ---
-# Cancel an educator subscription
+# How can I cancel my subscription? 
+
+You can cancel and reactivate your subscription at anytime. To cancel your subscription you can follow the following steps or send an email to <support@elementari.com>.
+
+1. Log in to your Elementari account, then click on your profile picture in the upper right corner.
+2. Click on *Settings*.
+3. Click on the tab *Plan*.
+
+
