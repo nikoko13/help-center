@@ -1,10 +1,10 @@
 <template>
   <v-divider class="mt-12"></v-divider>
-  <h4 class="mt-8 mb-1">{{ subCategory.name }}</h4>
+  <h4 class="mt-8 mb-1">{{ category.name }}</h4>
   <v-list dense lines="two" density="compact">
     <v-list-items>
       <v-list-item
-        v-for="(article, i) in subCategoryContent"
+        v-for="(article, i) in filterArticles()"
         :key="i"
         :value="article.title"
         :subtitle="article.title"
@@ -29,15 +29,21 @@
 
 <script setup>
 const props = defineProps({
-  subCategory: Object,
+  category: Object,
+  articles: Object
 });
 
 const { path } = useRoute();
-const subCategoryContent = await queryContent(path)
-  .where({ _subcategory: props.subCategory.name })
-  .find();
 
-
+const filterArticles = function () {
+  var list = []
+  for (var i = 0; i < props.articles.length; i++) {
+    if (props.articles[i]._subcategory == props.category.name) {
+      list.push(props.articles[i])
+    }
+  }
+  return list
+}
 </script>
 
 <style scope>
