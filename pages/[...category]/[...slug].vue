@@ -2,8 +2,7 @@
   <v-container class="article-wrapper">
     <div id="article">
       <ContentDoc v-slot="{ doc }">
-
-        <v-breadcrumbs :items="breadCrumbs" class="px-0">
+        <v-breadcrumbs v-if="breadCrumbs" :items="breadCrumbs" class="px-0">
           <template v-slot:divider>
             <v-icon icon="mdi-chevron-right"></v-icon>
           </template>
@@ -36,7 +35,6 @@
             </v-col>
           </v-row>
         </div>
-
       </ContentDoc>
   </div>
   </v-container>
@@ -48,12 +46,14 @@ definePageMeta({
   layout: "root",
 });
 
+let breadCrumbs = null
 let tempsubCategoryContent = []
 let subCategoryContent = []
 const { path } = useRoute()
-const queryPath = await queryContent({  where: {    _path: { $contains: path }  }}).findOne()
 
-let breadCrumbs = [
+const queryPath = await queryContent({  where: { _path: { $contains: path }  }}).findOne()
+
+breadCrumbs = [
   {
     text: "Help Center",
     disabled: false,
@@ -61,10 +61,12 @@ let breadCrumbs = [
   }
 ]
 
-if (queryPath._partial == true){
+if (path.split("/").length - 1 == 1){
+  console.log('yoooo')
   breadCrumbs.push({
-    text: queryPath.title,
-    disabled: true
+    text: queryPath._parent,
+    disabled: true,
+    to: queryPath._parent_path
   })
 }else{
   breadCrumbs.push({
@@ -74,14 +76,15 @@ if (queryPath._partial == true){
   })
   breadCrumbs.push({
     text: queryPath.title,
-    disabled: true
+    disabled: true,
+    to: queryPath._path
   })
 
   // query related articles
-
   const char_index = path.lastIndexOf("/");
   const substring = path.substring(0, char_index)
-
+  console.log(substring)
+  console.log(path)
   tempsubCategoryContent = await queryContent(substring).findSurround(path, { before: 4, after: 4 })
 
   for (var i = 0; i < 4; i++) {
@@ -108,7 +111,6 @@ if (queryPath._partial == true){
   }
 
 }
-
 
 
 </script>
