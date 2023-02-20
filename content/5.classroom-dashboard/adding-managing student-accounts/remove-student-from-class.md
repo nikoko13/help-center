@@ -1,11 +1,9 @@
 ---
-title: Import Google roster
+title: Remove a student account from a class
 
 _subcategory: Adding and managing student accounts
 _parent: Classroom dashboard
 _parent_path: /classroom-dashboard
-_featured: true
-_featured_in_all: true
 
 ---
-# Import Google Roster
+# Remove Student Account From a Class
